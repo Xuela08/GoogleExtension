@@ -1,0 +1,22 @@
+{
+  "name": "Aplicacion_tiempo*geo",
+  "description": "Esta aplicacion toma la localizacion y te muestra con dichos datos el tiempo.",
+  "version": "1",
+  "browser_action": {
+    "default_title": "Tiempo",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+  "geolocation", "http://*/"
+  ],
+  "content_scripts": [ {
+    "js": [ "jquery-1.7.1.min.js", "background.js" ],
+    "matches": ["<all_urls>"]
+  }],
+  "manifest_version": 2
+}
+
